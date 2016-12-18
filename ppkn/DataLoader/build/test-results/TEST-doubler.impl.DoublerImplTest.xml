@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="doubler.impl.DoublerImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-12-17T02:48:46" hostname="PARTHIDEV" time="0.002">
+  <properties/>
+  <testcase name="testIt" classname="doubler.impl.DoublerImplTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
