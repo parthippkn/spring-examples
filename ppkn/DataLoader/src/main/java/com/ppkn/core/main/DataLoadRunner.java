@@ -8,6 +8,7 @@ public class DataLoadRunner {
 
 	public static void main(String[] args) {
 
-		new AnnotationConfigApplicationContext(ServiceConfig.class);
+		new AnnotationConfigApplicationContext(ServiceConfig.class).close();
+
 	}
 }
