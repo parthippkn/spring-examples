@@ -11,7 +11,7 @@ import com.ppkn.core.config.AppConfigReader;
 @Component
 public class ReversibleEncryptor {
 
-    private static final String DELIM = "-";
+    private static final String DELIM = ";";
 
     @Autowired
     private AppConfigReader appConfigReader;
