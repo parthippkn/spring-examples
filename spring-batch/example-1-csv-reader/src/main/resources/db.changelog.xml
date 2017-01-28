@@ -182,16 +182,28 @@
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="first_name" type="VARCHAR(2500)">
+            <column name="first_name" type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="last_name" type="VARCHAR(2500)">
+            <column name="last_name" type="VARCHAR(60)">
                 <constraints nullable="false"/>
             </column>
-            <column name="email" type="VARCHAR(5000)">
+            <column name="email" type="VARCHAR(150)">
                 <constraints nullable="true"/>
             </column>
         </createTable>
  
   </changeSet>
+  
+  <changeSet id="06-app-unique-key-constraint" author="ppkn">
+	  <addUniqueConstraint 
+	            columnNames="first_name,last_name"
+	            constraintName="first_last_uq"
+	            deferrable="true"
+	            disabled="true"
+	            initiallyDeferred="true"
+	            tableName="user_profile"
+	            tablespace="A String"/>
+  </changeSet>
+   
 </databaseChangeLog>
