@@ -75,6 +75,14 @@ public class AppConfigReader {
 		return getProperty("import.csv.file.delim");
 	}
 
+	public String getExcelFilePath() {
+		return getProperty("import.excel.file.path");
+	}
+
+	public String getExcelFileHeader() {
+		return getProperty("import.excel.file.header");
+	}
+
 	private String getProperty(String propName) {
 		return environment.getProperty(propName);
 	}

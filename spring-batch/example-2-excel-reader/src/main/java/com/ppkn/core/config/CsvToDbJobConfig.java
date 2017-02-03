@@ -54,8 +54,9 @@ public class CsvToDbJobConfig {
 	}
 
 	@Bean(name = "csvFileToDatabaseStep")
-	public Step step1(ItemReader<UserDto> itemReader, ItemProcessor<UserDto, UserDto> itemProcessor,
-			ItemWriter<UserDto> itemWriter) {
+	public Step step1(@Qualifier("csvItemReader") ItemReader<UserDto> itemReader,
+			@Qualifier("csvItemProcessor") ItemProcessor<UserDto, UserDto> itemProcessor,
+			@Qualifier("csvItemWriter") ItemWriter<UserDto> itemWriter) {
 
 		return steps.get("csvFileToDatabaseStep").<UserDto, UserDto>chunk(10).reader(itemReader)
 				.processor(itemProcessor).writer(itemWriter).listener(new ItemReadListener<UserDto>() {
@@ -76,7 +77,7 @@ public class CsvToDbJobConfig {
 				}).build();
 	}
 
-	@Bean
+	@Bean(name = "csvItemReader")
 	public ItemReader<UserDto> csvItemReader() {
 
 		try {
@@ -92,7 +93,7 @@ public class CsvToDbJobConfig {
 
 	}
 
-	@Bean
+	@Bean(name = "csvItemProcessor")
 	public ItemProcessor<UserDto, UserDto> csvItemProcessor() {
 
 		return new ItemProcessor<UserDto, UserDto>() {
@@ -103,7 +104,7 @@ public class CsvToDbJobConfig {
 		};
 	}
 
-	@Bean
+	@Bean(name = "csvItemWriter")
 	public ItemWriter<UserDto> csvItemWriter() {
 
 		return new ItemWriter<UserDto>() {

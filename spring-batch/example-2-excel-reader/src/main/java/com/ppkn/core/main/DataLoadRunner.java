@@ -17,8 +17,8 @@ public class DataLoadRunner {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ServiceConfig.class);
 
 		JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
-		Job job = (Job) context.getBean("csvToDb");
-		System.out.println("Starting the batch job : " + job);
+		Job job = (Job) context.getBean("excelJob");
+		System.out.println("Starting the Excel batch job : " + job);
 		try {
 			// if we want to run same job for multiple times then create UUID as
 			// follows and convert as job params
@@ -28,6 +28,8 @@ public class DataLoadRunner {
 			JobExecution jobExecution = jobLauncher.run(job, jobParametersBuilder.toJobParameters());
 			System.out.println(
 					"JobExecution : " + jobExecution.getStatus() + "; Exist Status : " + jobExecution.getExitStatus());
+
+			context.close();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
