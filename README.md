@@ -3,6 +3,7 @@
 ## Getting Started
 
 This project will help to understand Spring Data
-```
-Give examples
-```
+
+## Projects
+
+* Spring Batch - Covers various use cases of spring batch
