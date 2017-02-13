@@ -5,6 +5,7 @@
 These examples covers various topics of spring batch
 
 * Example 1 - Read CSV File writes to DB
+* Example 2 - Read Excel File writes to DB
 
 ### Prerequisites
 
