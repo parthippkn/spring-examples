@@ -8,7 +8,10 @@ These examples covers various topics of spring batch
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+* JDK 1.8
+* Spring 4
+* MySQL
+* HikariCP
 
 ```
 Give examples
