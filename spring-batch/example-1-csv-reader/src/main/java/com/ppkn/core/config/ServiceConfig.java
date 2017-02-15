@@ -32,6 +32,11 @@ import liquibase.integration.spring.SpringLiquibase;
 @ComponentScan("com.ppkn.core")
 @EnableJpaRepositories(basePackages = { "com.ppkn.core" })
 @EnableTransactionManagement
+/**
+ * 
+ * @author parthipunitha
+ *
+ */
 public class ServiceConfig {
 
 	private static final Logger logger = LoggerFactory.getLogger(ServiceConfig.class);
