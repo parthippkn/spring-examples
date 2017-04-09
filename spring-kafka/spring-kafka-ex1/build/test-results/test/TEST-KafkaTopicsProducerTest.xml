@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="KafkaTopicsProducerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-04-09T02:00:01" hostname="DESKTOP-KS9U49Q" time="0.008">
+  <properties/>
+  <testcase name="testSomeLibraryMethod" classname="KafkaTopicsProducerTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
