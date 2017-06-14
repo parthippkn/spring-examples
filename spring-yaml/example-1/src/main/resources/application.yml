@@ -1,0 +1,44 @@
+#### log levels
+logging:
+  level:
+    org.springframework.web: info
+    org.cmdfw: debug
+  file: c:/temp/edlapp.log
+
+#### Website user name and password
+security:
+  user:
+    name: admin
+    password: password
+
+#### Database urls
+application:
+  name: cmdfwedl
+  database:
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3333/ppkn
+    username: devuser
+    password: 80d2cc491e293b673990929d336fbf1a1a08636c521b9f2276d992ca6da024f7;fd77b98c89091fb9
+  #### Neoncrm REST API urls
+  neoncrm:
+    authurl: https://api.neoncrm.com/neonws/services/api/common/login?login.apiKey=${token}&login.orgid=cmdfw
+    apikey: saa
+    endpoints:
+      - schema: Accounts
+        url: https://api.neoncrm.com/neonws/services/api/account/listAccountsByDefault?userSessionId=${sessionId}
+      - schema: Households
+        url: https://api.neoncrm.com/neonws/services/api/account/listHouseHolds?userSessionId=${sessionId}
+      - schema: Events
+        url: https://api.neoncrm.com/neonws/services/api/event/listEvents?userSessionId=${sessionId}
+      - schema: Event Attendees
+        url: https://api.neoncrm.com/neonws/services/api/event/retrieveEventAttendees?&userSessionId=${sessionId}
+#  #### Hibernate properties
+  hibernate:
+    dialect: org.hibernate.dialect.MySQL5Dialect
+    format_sql: true
+    show_sql: true
+
+
+
+
+
