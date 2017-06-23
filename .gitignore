@@ -1,0 +1,37 @@
+#
+# Project specific excludes
+#
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+
+# Maven 
+target/
+
+# eclipse project file
+.settings/
+.classpath
+.project
+.apt_generated
+
+
+# MAC OS
+.DS_Store
+
+.gradle
+build/
+.apt_generated/
+bin/
+.ejbdeploy/
+
