@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  config-server:
+    container_name: parthitest1
+    image: parthippkn/spring-boot
+    build: .
+#      context: .
+#      dockerfile: Dockerfile
+    environment:
+      ENV LOG_FILE_NAME: /app/logs/app.log
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    volumes:
+      - /c/Users/parthipunitha/dockercompose1:/app/logs

@@ -1,0 +1,5 @@
+logging:
+  file: ${LOG_FILE_NAME:c:/temp/app.log}
+  level:
+    org.springframework: info
+    com.ppkn: debug
