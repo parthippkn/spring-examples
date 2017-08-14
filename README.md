@@ -15,3 +15,7 @@ The following sample projects will help to understand the concepts
 * <a href="spring-jms">[Spring ActiveMQ]</a> - Spring JMS with ActiveMQ
 
 * <a href="spring-kafka">[Spring Kafka]</a> - Spring Kafka producer
+
+* <a href="spring-mvc">[Spring MVC]</a> - Spring MVC ( old style)
+
+* <a href="spring-yaml">[Spring YAML]</a> - Spring YAML to POJO
