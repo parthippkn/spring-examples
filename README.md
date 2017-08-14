@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This project will help to understand Spring Data
+The following sample projects will help to understand the concepts
 
 ## Projects
 
